@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuentas bancarias</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <h1>Sistema de cuentas bancarias</h1>
+    <h2>Registrar cuenta</h2>
+
+    <label>Numero de cuenta:</label>
+    <input type="text" id="numero">
+
+    <label>Nombre del titular:</label>
+    <input type="text" id="titular">
+    <label>Tipo de cuenta:</label>
+    
+    <select id="tipo">
+        <option value="ahorros">Ahorros</option>
+        <option value="corriente">Corriente</option>
+    </select>
+
+    <label>Saldo inicial:</label>
+    <input type="number" id="saldo">
+
+    <button onclick="registrarCuenta()">Registrar cuenta</button>
+
+    <h2>Operaciones</h2>
+
+    <label>Seleccionar cuenta:</label>
+    <select id="cuenta"></select>
+
+    <label>Valor:</label>
+    <input type="number" id="monto">
+
+    <button onclick="consignar()">Consignar</button>
+    <button onclick="retirar()">Retirar</button>
+    <button onclick="consultar()">Consultar saldo</button>
+
+    <p id="mensaje">Bienvenido al sistema.</p>
+
+    <h2>Cuentas registradas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Titular</th>
+                <th>Tipo</th>
+                <th>Saldo</th>
+            </tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+    </table>
+
+    <script src="cuentasBancarias.js"></script>
+</body>
+</html>
